@@ -2,21 +2,21 @@
 <!-- See: https://github.com/phonegap/phonegap-start/blob/master/www/config.xml -->
 <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.gamingplatform.Dot_and_Boxes"
-        versionCode = "9"
+        id          = "com.gamingplatform.reversi"
+        versionCode = "8"
         version     = "1.0.0" >
     <!-- versionCode is optional and Android only:
       needs to be increased every time you submit a new APK version.
       see: http://developer.android.com/tools/publishing/versioning.html
     -->
 
-    <name>Dots_and_Boxes</name>
+    <name>Reversi</name>
 
     <description>
-        A multiplayer Dots and Boxes game.
+        A multiplayer Reversi game.
     </description>
 
-    <author href="http://yw1981.github.io/homepage/Dots_and_Boxes" email="yw1981.nyu@gmail.com">
+    <author href="http://yw1981.github.io/homepage/Reversi" email="yw1981.nyu@gmail.com">
         Yuxin Wang
     </author>
 
@@ -55,8 +55,8 @@
     <!-- see: https://build.phonegap.com/plugins/1246 -->
 
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.8.0">
-        <param name="APP_ID" value="1642985342619112" />
-        <param name="APP_NAME" value="Dots_and_Boxes" />
+        <param name="APP_ID" value="1662727713975974" />
+        <param name="APP_NAME" value="Reversi" />
     </gap:plugin>
 
     <!-- https://build.phonegap.com/plugins/2828 -->
