@@ -20,6 +20,10 @@
         Yuxin Wang
     </author>
 
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+      <string>1000</string>
+    </gap:config-file>
+
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
@@ -44,6 +48,13 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+        <false/>
+    </gap:config-file>
+    <gap:config-file platform="ios" parent="UIStatusBarHidden" overwrite="true">
+        <true/>
+    </gap:config-file>
 
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:splash src="splash.png" width="512" height="512"/>
@@ -84,4 +95,27 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+
+    <gap:config-file platform="android" parent="/manifest/application" mode="add" >
+      <activity
+          android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+          android:name=".Reversi" android:label="@string/app_name"
+          android:screenOrientation="unspecified"
+          android:launchMode="singleTask"
+          android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN"/>
+          <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW"/>
+          <category android:name="android.intent.category.DEFAULT"/>
+          <category android:name="android.intent.category.BROWSABLE"/>
+          <data android:scheme="reversi"/>
+        </intent-filter>
+      </activity>
+    </gap:config-file>
+    <gap:url-scheme>
+      <scheme>reversi</scheme>
+    </gap:url-scheme>
 </widget>
