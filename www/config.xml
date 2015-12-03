@@ -19,11 +19,11 @@
     <author href="http://yw1981.github.io/homepage/Reversi" email="yw1981.nyu@gmail.com">
         Yuxin Wang
     </author>
-
+<!--
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
       <string>1000</string>
     </gap:config-file>
-
+-->
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
@@ -48,14 +48,14 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-
+<!--
     <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
         <false/>
     </gap:config-file>
     <gap:config-file platform="ios" parent="UIStatusBarHidden" overwrite="true">
         <true/>
     </gap:config-file>
-
+-->
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:splash src="splash.png" width="512" height="512"/>
 
@@ -115,7 +115,9 @@
         </intent-filter>
       </activity>
     </gap:config-file>
+<!--
     <gap:url-scheme>
       <scheme>reversi</scheme>
     </gap:url-scheme>
+-->
 </widget>
